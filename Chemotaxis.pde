@@ -2,16 +2,16 @@
  Bacteria [] bob;
  void setup()   
  {     
- 	background(200);
- 	size(500,500);
- 	bob = new Bacteria[20];
+ 	background(0);
+ 	size(600,600);
+ 	bob = new Bacteria[600];
  	for(int i = 0; i < bob.length; i++){
  		bob[i] = new Bacteria();
  	}
  }   
  void draw()   
  {    
- 	background(200);
+ 	background(0);
  	for(int i = 0; i < bob.length; i++){
  		bob[i].walk();
  		bob[i].show();
@@ -21,17 +21,19 @@
  class Bacteria    
  {     
  	//lots of java!
+ 	int myColor;
  	int mx,my;
  	Bacteria(){
- 		mx = 250;
- 		my = 250;
+ 		mx = (int)(Math.random()*499)+50;
+ 		my = (int)(Math.random()*499)+50;
+ 		myColor = color((int)(Math.random()*255)+1,(int)(Math.random()*499)+1,(int)(Math.random()*499)+1);
  	}
  	void walk(){
  		mx = mx + (int)(Math.random()*5)-2;
  		my = my + (int)(Math.random()*5)-2;
  	}
  	void show(){
- 	fill(255);
- 	circle(mx,my,35);
+ 	fill(myColor);
+ 	ellipse(mx,my,4,4);
  	}
  }    
