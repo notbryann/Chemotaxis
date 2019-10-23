@@ -26,11 +26,12 @@
  	Bacteria(){
  		mx = (int)(Math.random()*499)+50;
  		my = (int)(Math.random()*499)+50;
- 		myColor = color((int)(Math.random()*255)+1,(int)(Math.random()*499)+1,(int)(Math.random()*499)+1);
+ 		myColor = color((int)(Math.random()*50)+205,(int)(Math.random()*50)+185,(int)(Math.random()*15)+20);
  	}
  	void walk(){
  		mx = mx + (int)(Math.random()*5)-2;
  		my = my + (int)(Math.random()*5)-2;
+ 		
  	}
  	void show(){
  	fill(myColor);
